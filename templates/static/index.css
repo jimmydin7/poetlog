@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left, .right {
+    flex: 1;
+    padding: 50px;
+    overflow-y: auto;
+}
+
+.left {
+    border-right: 1px solid #444;
+}
+
+.right {
+    text-align: left;
+}
+
+.red-word {
+    color: red;
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 10px 0;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.poem-line {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
