@@ -4,7 +4,7 @@ API_ENDPOINT = 'https://ipinfo.io/'
 
 def request_geo(ip):
     
-    response = requests.get(API_ENDPOINT+f'/{ip}/json').json() 
+    response = requests.get(API_ENDPOINT+f'{ip}/json').json() 
 
     geo_data = {
 
@@ -17,3 +17,5 @@ def request_geo(ip):
         
         
     }
+
+    return geo_data
