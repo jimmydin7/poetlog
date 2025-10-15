@@ -2,7 +2,7 @@
 
 from flask import Flask, render_template, request
 import os
-#import socket
+from utils.geo import request_geo
 
 app = Flask(__name__)
 
@@ -10,8 +10,9 @@ app = Flask(__name__)
 def index():
 
     ip = request.headers.get('X-Forwarded-For', request.remote_addr) #get ip
+    geodata = request_geo(ip)
 
-    return render_template('index.html', ip=ip)
+    return render_template('index.html', geodata=geodata)
 
 if __name__ == "__main__":
 
