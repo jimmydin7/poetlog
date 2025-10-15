@@ -1,6 +1,7 @@
 # Poetlog is a simple IP logger that generates poet lyrics with AI based on your information
 
-from flask import Flask, render_template, os
+from flask import Flask, render_template
+import os
 
 
 app = Flask(__name__)
