@@ -11,7 +11,7 @@ def index():
 
     ip = request.headers.get('X-Forwarded-For', request.remote_addr) #get ip
 
-    return render_template('index.html')
+    return render_template('index.html', ip=ip)
 
 if __name__ == "__main__":
 
