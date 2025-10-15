@@ -21,31 +21,33 @@
 
 
         <div class="right">
-            <h1>Your fricking IPv6 address is:</h1>
-            <p>2a02:586:451a:d600:714f:9452:29f7:9d96</p>
+            <h1>Your fricking IP address is:</h1>
+            <p>{{ geodata['ip'] }}</p>
 
-            <h1>Your fricking host name is:</h1>
-            <p>2a02:586:451a:d600:714f:9452:29f7:9d96</p>
+            <h1>You live in freaking:</h1>
+            <p>{{ geodata['city'] }}</p>
 
-            <h3>Geographic location of your fricking IPv6 address:</h3>
-            <p>Marousi, I, Greece</p>
+            <h3>In the freaking region:</h3>
+            <p>{{ geodata['region'] }}</p>
 
-            <h1>Your fricking IPv4 address is:</h1>
-            <p>2.86.220.107</p>
+            <h1>In the freaking country:</h1>
+            <p>{{ geodata['country'] }}</p>
 
-            <h1>Your fricking IPv4 hostname is:</h1>
-            <p>2.86.220.107</p>
+            <h1>Your freaking coordinates are:</h1>
+            <p>{{ geodata['location'] }}</p>
 
-            <h3>Geographic location of your fricking IPv4 address:</h3>
-            <p>Marousi, I, Greece</p>
+            <h3>Your freaking ISP is:</h3>
+            <p>{{ geodata['isp'] }}</p>
+
+            <h3>Your freaking timezone is:</h3>
+            <p>{{ geodata['timezone'] }}</p>
 
 
             <hr style="border:1px solid #555;">
 
             <h4>RESOURCES</h4>
             <p>
-                <a href="#">Our Fricking Privacy Policy</a><br>
-                <a href="#">Our Open Source Github Repository</a><br>
+                <a href="https://github.com/jimmydin7/poetlog">Our Open Source Github Repository</a><br>
             </p>
         </div>
     </div>

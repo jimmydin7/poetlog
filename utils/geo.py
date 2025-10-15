@@ -16,7 +16,9 @@ def request_geo(ip):
             "country": data.get('country'),
             "location": data.get('loc'),
             "isp": data.get('org'),
-            "timezone": data.get('timezone')
+            "timezone": data.get('timezone'),
+            "ip": ip
+
         }
 
         return geo_data
