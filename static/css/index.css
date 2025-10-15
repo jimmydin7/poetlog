@@ -47,3 +47,31 @@ a:hover {
     margin: 10px 0;
     font-size: 1.2em;
 }
+
+
+.github-fab {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #111;
+    border: 1px solid #333;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    z-index: 9999;
+}
+.github-fab:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.7);
+    background: #181818;
+}
+.github-fab svg {
+    width: 26px;
+    height: 26px;
+    fill: #fff;
+}
