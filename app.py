@@ -3,7 +3,7 @@
 from flask import Flask, render_template, request
 import os
 from utils.geo import request_geo
-from ai.ai import generate_poem
+from utils.poem import generate_poem
 
 app = Flask(__name__)
 
