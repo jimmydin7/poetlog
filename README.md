@@ -4,7 +4,15 @@
 
 a simple IP logger that generates poet lyrics with AI based on your geodata information.
 
-based on flask, when a user visits the website he views his ip, location, region, city, country, coordinates, isp, & timezone. 
+this project is built with flask. when a user visits the website, they can see the following information about
+- ip address
+- location
+- region
+- city
+- country
+- coordinates
+- isp
+- timezone
 
 after that, an AI model hosted locally generates a spooky poem based on the above information.
 
