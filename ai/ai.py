@@ -1,14 +1,6 @@
-import http.client
+import os
 
-conn = http.client.HTTPSConnection("ai.hackclub.com")
+open_ai_api_key = os.environ.get('OPENAI_API_KEY')
+alternative_api = os.environ.get('ALTERNATIVE_FREE_API')
 
-payload = "{\"messages\":[{\"content\":\"Tell me a joke!\",\"role\":\"user\"}]}"
-
-headers = { 'Content-Type': "application/json" }
-
-conn.request("POST", "/chat/completions", payload, headers)
-
-res = conn.getresponse()
-data = res.read()
-
-print(data.decode("utf-8"))
+def generate_poem()
