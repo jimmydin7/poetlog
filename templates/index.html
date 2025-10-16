@@ -15,12 +15,13 @@
             <div class="left">
                 <div class="poem-line">AI generated poem:</div>
                 <hr style="border:1px solid #555;">
-                <div class="poem-line">In the <span class="red-word">silence</span> of the night,</div>
-                <div class="poem-line">The <span class="red-word">moon</span> whispers soft delight.</div>
-                <div class="poem-line">Shadows <span class="red-word">dance</span> upon the floor,</div>
-                <div class="poem-line">Dreams of <span class="red-word">hope</span> forevermore.</div>
-                <div class="poem-line">Hearts <span class="red-word">burn</span> with quiet fire,</div>
-                <div class="poem-line">Yearning <span class="red-word">love</span>, our true desire.</div>
+                {% if poem_lines %}
+                    {% for line in poem_lines %}
+                    <div class="poem-line">{{ line|safe }}</div>
+                    {% endfor %}
+                {% else %}
+                    <div class="poem-line">No poem generated.</div>
+                {% endif %}
             </div>
 
             <div class="right">

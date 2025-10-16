@@ -3,6 +3,7 @@
 from flask import Flask, render_template, request
 import os
 from utils.geo import request_geo
+from ai.ai import generate_poem
 
 app = Flask(__name__)
 
@@ -11,8 +12,19 @@ def index():
 
     ip = request.headers.get('X-Forwarded-For', request.remote_addr) #get ip
     geodata = request_geo(ip)
+    if not geodata:
+        geodata = {
+            "city": "",
+            "region": "",
+            "country": "",
+            "location": "",
+            "isp": "",
+            "timezone": "",
+            "ip": ip or "",
+        }
+    poem_lines = generate_poem(geodata)
 
-    return render_template('index.html', geodata=geodata)
+    return render_template('index.html', geodata=geodata, poem_lines=poem_lines)
 
 if __name__ == "__main__":
 
